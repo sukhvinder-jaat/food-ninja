@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,22 +21,22 @@ const Header = () => {
           <div className="max-w-[1100px] 2xl:max-w-[1320px] mx-auto xl:px-0 px-3">
             <div className="flex items-center justify-between sm:pt-[36px] pt-6">
               <div className="flex-shrink-0">
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className=" font-Merriweather md:text-xl text-lg text-Stratos font-black leading-[normal] relative z-50"
                 >
                   Food Ninja
-                </a>
+                </Link>
               </div>
               <div className="hidden md:block">
                 <ul className="flex items-baseline gap-5">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/blog"
                       className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal] "
                     >
                       Blog
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a
