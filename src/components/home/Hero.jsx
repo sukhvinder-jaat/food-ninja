@@ -1,6 +1,7 @@
 import React from "react";
 import george from "../../assets/images/webp/georgeImage.webp";
 import { FoodData } from "../../common/Helper";
+import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <>
@@ -41,16 +42,19 @@ const Hero = () => {
             return (
               <div className="md:w-6/12 w-full">
                 <div className={` h-full ${data.space}`} key={i}>
-                  <img
-                    src={data.mainImage}
-                    alt={data.mainImageName}
-                    className="w-full"
-                  />
+                  <Link to={data.to}>
+                    {" "}
+                    <img
+                      src={data.mainImage}
+                      alt={data.mainImageName}
+                      className="w-full"
+                    />
+                  </Link>
                   <div className="pt-5 flex flex-col md:justify-between h-full xl:max-h-[345px] lg:max-h-[370px] md:max-h-[405px]">
                     <div>
                       {" "}
-                      <button className="text-[#DFE1E7] font-Roboto text-xs font-medium leading-[normal] p-[5px_17px] rounded-[3px] bg-Rhino mb-2">
-                        {data.btn}
+                      <button className="text-[#DFE1E7] font-Roboto text-xs font-medium leading-[normal] p-[5px_17px] rounded-[3px] bg-Rhino mb-2 hover:text-Rhino overflow-hidden relative after:content-[''] after:w-0 hover:after:w-full after:absolute after:bg-white after:h-0 hover:after:h-full after:top-0 hover:after:start-0 border-[2px] border-Rhino after:start-[50%] after:transition-all ease-in-out after:duration-300 duration-300 after:rounded-[3px]">
+                        <span className=" relative z-10"> {data.btn}</span>
                       </button>
                       <p className="font-Merriweather md:text-xl text-lg text-Stratos font-bold leading-[140%] max-w-[515px]">
                         {data.heading}

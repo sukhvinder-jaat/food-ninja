@@ -5,8 +5,8 @@ const BlogHero = () => {
   return (
     <>
       <div className="max-w-[800px] 2xl:max-w-[940px] mx-auto xl:px-0 px-3 lg:mt-24 md:mt-16 mt-10">
-        <button className="text-[#DFE1E7] font-Roboto text-xs font-medium leading-[normal] p-[5px_17px] rounded-[3px] bg-Rhino mb-3">
-          Food Theory
+        <button className="text-[#DFE1E7] font-Roboto text-xs font-medium leading-[normal] p-[5px_17px] rounded-[3px] bg-Rhino mb-3 hover:text-Rhino overflow-hidden relative after:content-[''] after:w-0 hover:after:w-full after:absolute after:bg-white after:h-0 hover:after:h-full after:top-0 hover:after:start-0 border-[2px] border-Rhino after:start-[50%] after:transition-all ease-in-out after:duration-300 duration-300 after:rounded-[3px]">
+          <span className=" relative z-10"> Food Theory</span>
         </button>
         <h2 className="text-black font-Merriweather md:text-4xl sm:text-[40px] text-[34px] font-bold leading-[normal] max-w-[815px]">
           What I Learned About Life and Food Backpacking Around Greece
@@ -17,7 +17,7 @@ const BlogHero = () => {
         <img
           src={lightHouse}
           alt="lightHouse"
-          className="w-full shadow-[0px_5px_10px_0px_rgba(0,0,0,0.50)] mb-5"
+          className="w-full shadow-[0px_5px_10px_0px_rgba(0,0,0,0.50)] mb-5 rounded-[5px]"
         />
         <div className="flex items-center gap-[14px]">
           <img

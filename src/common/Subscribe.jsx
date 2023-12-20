@@ -16,8 +16,8 @@ const Subscribe = () => {
             placeholder="Email"
             className="text-Willow font-Roboto text-base font-medium rounded-[3px] bg-white py-3 px-4 w-full max-w-[288px] mb-4 focus-visible:outline-none"
           />
-          <button className=" text-white font-Roboto text-base font-medium leading-[160%] bg-Stratos p-[9px_18px] rounded-[3px]">
-            Sign Up
+          <button className=" text-white font-Roboto text-base font-medium leading-[160%] bg-Stratos p-[9px_18px] rounded-[3px] hover:text-Stratos overflow-hidden relative after:content-[''] after:w-0 hover:after:w-full after:absolute after:bg-white after:h-0 hover:after:h-full after:top-0 hover:after:start-0 border-[2px] border-Rhino after:start-[50%] after:transition-all ease-in-out after:duration-300 duration-300 after:rounded-[3px]">
+            <span className=" relative z-10">Sign Up</span>
           </button>
         </div>
         <div className="lg:ps-20 sm:ps-10 sm:mt-0 mt-5">

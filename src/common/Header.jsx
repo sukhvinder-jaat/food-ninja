@@ -56,8 +56,8 @@ const Header = () => {
                   </li>
 
                   <li>
-                    <button className="md:flex hidden bg-Rhino rounded-[29px] p-[8px_15px] text-white font-Roboto text-base font-normal leading-[normal]">
-                      Log in
+                    <button className="md:flex hidden bg-Rhino rounded-[29px] p-[8px_15px] text-white font-Roboto text-base font-normal leading-[normal] hover:text-Rhino overflow-hidden relative after:content-[''] after:w-0 hover:after:w-full after:absolute after:bg-white after:h-0 hover:after:h-full after:top-0 hover:after:start-0 border-[2px] border-Rhino after:start-[50%] after:transition-all ease-in-out after:duration-300 duration-300 after:rounded-full">
+                      <span className="relative z-10"> Log in</span>
                     </button>
                   </li>
                 </ul>
