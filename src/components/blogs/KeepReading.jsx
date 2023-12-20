@@ -1,6 +1,6 @@
 import React from "react";
-import food from "../../assets/images/webp/keepFood.png";
-import cooking from "../../assets/images/webp/keepCooking.png";
+import food from "../../assets/images/webp/keepFood.webp";
+import cooking from "../../assets/images/webp/keepCooking.webp";
 const KeepReading = () => {
   return (
     <>
@@ -12,7 +12,7 @@ const KeepReading = () => {
           <img
             src={food}
             alt="food"
-            className="sm:max-w-[250px] w-full shadow-[0px_5px_10px_0px_rgba(0,0,0,0.50)]"
+            className="sm:max-w-[250px] w-full shadow-[0px_5px_10px_0px_rgba(0,0,0,0.50)] rounded-[5px]"
           />
           <div className="sm:ps-8 pt-3 sm:pt-0">
             <p className="text-Shaft font-Merriweather md:text-xl text-lg font-bold leading-[160%] mb-2">
@@ -28,7 +28,7 @@ const KeepReading = () => {
           <img
             src={cooking}
             alt="cooking"
-            className="sm:max-w-[250px] w-full shadow-[0px_5px_10px_0px_rgba(0,0,0,0.50)]"
+            className="sm:max-w-[250px] w-full shadow-[0px_5px_10px_0px_rgba(0,0,0,0.50)] rounded-[5px]"
           />
           <div className="sm:ps-8 pt-3 sm:pt-0">
             <p className="text-Shaft font-Merriweather md:text-xl text-lg font-bold leading-[160%] mb-2">
