@@ -37,12 +37,12 @@ const Hero = () => {
           </span>
         </div>
         {/* cards */}
-        <div className="md:mt-20 mt-10  flex flex-wrap">
+        <div className="md:mt-16 mt-10  flex flex-wrap">
           {FoodData.map((data, i) => {
             return (
-              <div className="md:w-6/12 w-full">
+              <div className="md:w-6/12 w-full mt-5">
                 <div className={` h-full ${data.space}`} key={i}>
-                  <Link to={data.to}>
+                  <Link to={data.to} className="">
                     {" "}
                     <img
                       src={data.mainImage}
@@ -61,7 +61,7 @@ const Hero = () => {
                       <p className="text-Emperor font-Merriweather text-xs font-normal leading-[160%] mb-4">
                         {data.date}
                       </p>
-                      <p className="text-Tundora font-Roboto text-[19px] font-normal leading-[160%] mb-4">
+                      <p className="text-Tundora font-Roboto text-sm font-normal leading-[160%] mb-4">
                         {data.para}
                       </p>
                     </div>
