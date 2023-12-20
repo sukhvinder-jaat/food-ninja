@@ -1,7 +1,6 @@
 import React from "react";
-import image from "../assets/images/webp/waterImage.webp";
-import george from "../assets/images/webp/georgeImage.webp";
-import { FoodData } from "../common/Helper";
+import george from "../../assets/images/webp/georgeImage.webp";
+import { FoodData } from "../../common/Helper";
 const Hero = () => {
   return (
     <>

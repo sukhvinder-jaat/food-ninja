@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Subscribe from "../components/Subscribe";
-import Footer from "../components/Footer";
+import Hero from "../components/home/Hero";
+import Header from "../common/Header";
+import Subscribe from "../common/Subscribe";
+import Footer from "../common/Footer";
 
 const Main = () => {
   return (

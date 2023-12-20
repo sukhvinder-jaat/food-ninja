@@ -14,7 +14,7 @@ const Subscribe = () => {
           <input
             type="text"
             placeholder="Email"
-            className="text-Willow font-Roboto text-base font-medium rounded-[3px] bg-white py-3 px-4 w-full max-w-[288px] mb-4"
+            className="text-Willow font-Roboto text-base font-medium rounded-[3px] bg-white py-3 px-4 w-full max-w-[288px] mb-4 focus-visible:outline-none"
           />
           <button className=" text-white font-Roboto text-base font-medium leading-[160%] bg-Stratos p-[9px_18px] rounded-[3px]">
             Sign Up
@@ -23,6 +23,20 @@ const Subscribe = () => {
         <div className="lg:ps-20 sm:ps-10 sm:mt-0 mt-5">
           <p className="text-black font-Roboto text-xs font-medium leading-[160%] sm:mb-7 mb-5">
             POPULAR POSTS
+          </p>
+          <p className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5 max-w-[280px]">
+            How To Have Your Cake and Eat It Too: The Way of The Chicken Man
+          </p>
+          <p className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5">
+            My Grandma’s 30-year-old Recipe
+          </p>
+          <p className="text-black font-Roboto text-xs font-medium leading-[160%]">
+            What I learned about cooking from Ratatoulie
+          </p>
+        </div>
+        <div className="lg:ps-20 sm:ps-10 sm:mt-0 mt-5">
+          <p className="text-black font-Roboto text-xs font-medium leading-[160%] sm:mb-7 mb-5">
+            Recent Posts
           </p>
           <p className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5 max-w-[280px]">
             How To Have Your Cake and Eat It Too: The Way of The Chicken Man
