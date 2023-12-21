@@ -15,10 +15,11 @@ const Hero = () => {
         <div className=" pe-5 rounded-[5px] border-[1px] border-Steam bg-Heaven max-w-[430px] overflow-hidden flex items-center mx-auto">
           <input
             type="text"
+            id="search"
             placeholder="Search for articles"
             className="ps-7 py-[18px] w-full text-Scorpion placeholder:text-Scorpion font-Merriweather text-base font-normal leading-[normal] focus-visible:outline-none"
           />
-          <span>
+          <label for="search">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -34,22 +35,25 @@ const Hero = () => {
                 fill="#DDDDDD"
               />
             </svg>
-          </span>
+          </label>
         </div>
         {/* cards */}
         <div className="md:mt-16 mt-10  flex flex-wrap">
           {FoodData.map((data, i) => {
             return (
-              <div className="md:w-6/12 w-full mt-5">
-                <div className={` h-full ${data.space}`} key={i}>
-                  <Link to={data.to} className="">
-                    {" "}
+              <div className={`md:w-6/12 w-full ${data.space}`}>
+                <Link
+                  to={data.to}
+                  className="flex flex-col h-full group"
+                  key={i}
+                >
+                  <div className=" overflow-hidden rounded-[5px] min-h-[270px]">
                     <img
                       src={data.mainImage}
                       alt={data.mainImageName}
-                      className="w-full"
+                      className="w-full group-hover:scale-110 transition-all ease-linear duration-200"
                     />
-                  </Link>
+                  </div>
                   <div className="pt-5 flex flex-col md:justify-between h-full xl:max-h-[345px] lg:max-h-[370px] md:max-h-[405px]">
                     <div className="mb-0">
                       <button className="text-[#DFE1E7] font-Roboto text-xs font-medium leading-[normal] p-[5px_17px] rounded-[3px] bg-Rhino mb-2 hover:text-Rhino overflow-hidden relative after:content-[''] after:w-0 hover:after:w-full after:absolute after:bg-white after:h-0 hover:after:h-full after:top-0 hover:after:start-0 border-[2px] border-Rhino after:start-[50%] after:transition-all ease-in-out after:duration-300 duration-300 after:rounded-[3px]">
@@ -76,7 +80,7 @@ const Hero = () => {
                       </p>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             );
           })}

@@ -1,6 +1,7 @@
 import React from "react";
 import food from "../../assets/images/webp/keepFood.webp";
 import cooking from "../../assets/images/webp/keepCooking.webp";
+import { Link } from "react-router-dom";
 const KeepReading = () => {
   return (
     <>
@@ -8,14 +9,16 @@ const KeepReading = () => {
         <p className="text-Shaft font-Merriweather md:text-3xl text-[34px] leading-[160%] font-bold">
           Keep reading
         </p>
-        <div className="flex sm:flex-row flex-col my-[30px]">
-          <img
-            src={food}
-            alt="food"
-            className="sm:max-w-[250px] w-full shadow-[0px_5px_10px_0px_rgba(0,0,0,0.50)] rounded-[5px]"
-          />
+        <Link to="/" className="flex sm:flex-row flex-col my-[30px] group">
+          <div className=" overflow-hidden rounded-[5px] min-w-[250px]">
+            <img
+              src={food}
+              alt="food"
+              className="sm:max-w-[250px] w-full shadow-[0px_5px_10px_0px_rgba(0,0,0,0.50)] rounded-[5px] group-hover:scale-110 transition-all ease-linear duration-200"
+            />
+          </div>
           <div className="sm:ps-8 pt-3 sm:pt-0">
-            <p className="text-Shaft font-Merriweather md:text-xl text-lg font-bold leading-[160%] mb-2">
+            <p className="text-Shaft font-Merriweather md:text-xl text-lg font-bold leading-[160%] mb-2 group-hover:underline">
               Why you don’t need more than 3 pieces of clothing
             </p>
             <p className=" text-Black_oak font-Roboto text-base font-normal leading-[160%]">
@@ -23,15 +26,17 @@ const KeepReading = () => {
               amet nisl tortor arcu non id nulla mauris neque nisl magna.
             </p>
           </div>
-        </div>
-        <div className="flex sm:flex-row flex-col">
-          <img
-            src={cooking}
-            alt="cooking"
-            className="sm:max-w-[250px] w-full shadow-[0px_5px_10px_0px_rgba(0,0,0,0.50)] rounded-[5px]"
-          />
+        </Link>
+        <Link className="flex sm:flex-row flex-col group">
+          <div className=" overflow-hidden rounded-[5px] min-w-[250px]">
+            <img
+              src={cooking}
+              alt="cooking"
+              className="sm:max-w-[250px] w-full shadow-[0px_5px_10px_0px_rgba(0,0,0,0.50)] rounded-[5px] group-hover:scale-110 transition-all ease-linear duration-200"
+            />
+          </div>
           <div className="sm:ps-8 pt-3 sm:pt-0">
-            <p className="text-Shaft font-Merriweather md:text-xl text-lg font-bold leading-[160%] mb-2">
+            <p className="text-Shaft font-Merriweather md:text-xl text-lg font-bold leading-[160%] mb-2 group-hover:underline">
               Why you should cook with your family together everyday
             </p>
             <p className=" text-Black_oak font-Roboto text-base font-normal leading-[160%]">
@@ -39,7 +44,7 @@ const KeepReading = () => {
               fermentum donec nunc lacinia. Risus in egestas in orci quam.
             </p>
           </div>
-        </div>
+        </Link>
       </div>
     </>
   );

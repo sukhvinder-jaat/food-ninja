@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Subscribe = () => {
   return (
@@ -20,33 +21,51 @@ const Subscribe = () => {
             <span className=" relative z-10">Sign Up</span>
           </button>
         </div>
-        <div className="lg:ps-20 sm:ps-10 sm:mt-0 mt-5">
+        <div className="lg:ps-20 sm:ps-10 sm:mt-0 mt-5 flex flex-col">
           <p className="text-black font-Roboto text-xs font-medium leading-[160%] sm:mb-7 mb-5">
             POPULAR POSTS
           </p>
-          <p className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5 max-w-[280px]">
+          <Link
+            to="/"
+            className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5 max-w-[242px] hover:underline inline-block"
+          >
             How To Have Your Cake and Eat It Too: The Way of The Chicken Man
-          </p>
-          <p className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5">
+          </Link>
+          <Link
+            to="/"
+            className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5 hover:underline inline-block"
+          >
             My Grandma’s 30-year-old Recipe
-          </p>
-          <p className="text-black font-Roboto text-xs font-medium leading-[160%]">
+          </Link>
+          <Link
+            to="/"
+            className="text-black font-Roboto text-xs font-medium leading-[160%] hover:underline inline-block"
+          >
             What I learned about cooking from Ratatoulie
-          </p>
+          </Link>
         </div>
-        <div className="lg:ps-20 sm:ps-10 sm:mt-0 mt-5">
+        <div className="lg:ps-20 sm:ps-10 sm:mt-0 mt-5 flex flex-col">
           <p className="text-black font-Roboto text-xs font-medium leading-[160%] sm:mb-7 mb-5">
             Recent Posts
           </p>
-          <p className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5 max-w-[280px]">
+          <Link
+            to="/"
+            className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5 max-w-[242px] hover:underline inline-block"
+          >
             How To Have Your Cake and Eat It Too: The Way of The Chicken Man
-          </p>
-          <p className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5">
+          </Link>
+          <Link
+            to="/"
+            className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5 hover:underline inline-block"
+          >
             My Grandma’s 30-year-old Recipe
-          </p>
-          <p className="text-black font-Roboto text-xs font-medium leading-[160%]">
+          </Link>
+          <Link
+            to="/"
+            className="text-black font-Roboto text-xs font-medium leading-[160%] hover:underline inline-block"
+          >
             What I learned about cooking from Ratatoulie
-          </p>
+          </Link>
         </div>
       </div>
     </>

@@ -1,6 +1,7 @@
 import React from "react";
 import lightHouse from "../../assets/images/webp/lightHouse.webp";
 import george from "../../assets/images/webp/georgeImage.webp";
+import { Link } from "react-router-dom";
 const BlogHero = () => {
   return (
     <>
@@ -47,14 +48,29 @@ const BlogHero = () => {
             In this article
           </p>
           <ul className=" list-decimal ps-[18px]">
-            <li className=" underline underline-offset-2 text-Shaft font-Merriweather text-base font-normal leading-[160%]">
-              How to travel without spending a dime
+            <li>
+              <Link
+                className=" underline underline-offset-2 text-Shaft font-Merriweather text-base font-normal leading-[160%]"
+                to="/"
+              >
+                How to travel without spending a dime
+              </Link>
             </li>
-            <li className=" underline underline-offset-2 text-Shaft font-Merriweather text-base font-normal leading-[160%] my-4">
-              Get the most out of your credit card reward points
+            <li className="my-4">
+              <Link
+                className=" underline underline-offset-2 text-Shaft font-Merriweather text-base font-normal leading-[160%] "
+                to="/"
+              >
+                Get the most out of your credit card reward points
+              </Link>
             </li>
-            <li className=" underline underline-offset-2 text-Shaft font-Merriweather text-base font-normal leading-[160%]">
-              Why you don’t need more than 3 pieces of clothing
+            <li>
+              <Link
+                to="/"
+                className=" underline underline-offset-2 text-Shaft font-Merriweather text-base font-normal leading-[160%]"
+              >
+                Why you don’t need more than 3 pieces of clothing
+              </Link>
             </li>
           </ul>
         </div>
