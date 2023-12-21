@@ -42,3 +42,9 @@ export const FoodData = [
     to: "/blog-page",
   },
 ];
+
+export const links = [
+  { to: "/blog-page", lable: "blog" },
+  { to: "/about-page", lable: "about" },
+  { to: "/contact-page", lable: "contact" },
+];

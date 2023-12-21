@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-
+import { links } from "./Helper";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
@@ -30,43 +30,22 @@ const Header = () => {
               </div>
               <div className="hidden md:block">
                 <ul className="flex items-baseline gap-5">
-                  <li>
-                    <Link
-                      to="/blog-page"
-                      className={`${
-                        path.pathname === "/blog-page"
-                          ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
-                          : "text-Willow"
-                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
-                    >
-                      Blog
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/about-page"
-                      className={`${
-                        path.pathname === "/about-page"
-                          ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
-                          : "text-Willow"
-                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
-                    >
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/contact-page"
-                      className={`${
-                        path.pathname === "/contact-page"
-                          ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
-                          : "text-Willow"
-                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
-                    >
-                      Contact
-                    </Link>
-                  </li>
-
+                  {links.map((link, i) => {
+                    return (
+                      <li onClick={() => setIsOpen(!isOpen)} key={i}>
+                        <Link
+                          to={link.to}
+                          className={`${
+                            path.pathname === link.to
+                              ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
+                              : "text-Willow"
+                          }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
+                        >
+                          {link.lable}
+                        </Link>
+                      </li>
+                    );
+                  })}
                   <li>
                     <button className="md:flex hidden bg-Rhino rounded-[29px] p-[8px_15px] text-white font-Roboto text-base font-normal leading-[normal] hover:text-Rhino overflow-hidden relative after:content-[''] after:w-0 hover:after:w-full after:absolute after:bg-white after:h-0 hover:after:h-full after:top-0 hover:after:start-0 border-[2px] border-Rhino after:start-[50%] after:transition-all ease-in-out after:duration-300 duration-300 after:rounded-full">
                       <span className="relative z-10"> Log in</span>
@@ -127,42 +106,22 @@ const Header = () => {
             id="mobile-menu"
           >
             <ul className="px-2 pt-2 pb-3 space-y-1 h-full sm:px-3 flex flex-col justify-center items-center h_mobile">
-              <li onClick={() => setIsOpen(!isOpen)}>
-                <Link
-                  to="/blog-page"
-                  className={`${
-                    path.pathname === "/blog-page"
-                      ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
-                      : "text-Willow"
-                  }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
-                >
-                  Blog
-                </Link>
-              </li>
-              <li onClick={() => setIsOpen(!isOpen)}>
-                <Link
-                  to="/about-page"
-                  className={`${
-                    path.pathname === "/about-page"
-                      ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
-                      : "text-Willow"
-                  }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
-                >
-                  About
-                </Link>
-              </li>
-              <li onClick={() => setIsOpen(!isOpen)}>
-                <Link
-                  to="/contact-page"
-                  className={`${
-                    path.pathname === "/contact-page"
-                      ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
-                      : "text-Willow"
-                  }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
-                >
-                  Contact
-                </Link>
-              </li>
+              {links.map((link, i) => {
+                return (
+                  <li onClick={() => setIsOpen(!isOpen)} key={i}>
+                    <Link
+                      to={link.to}
+                      className={`${
+                        path.pathname === link.to
+                          ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
+                          : "text-Willow"
+                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
+                    >
+                      {link.lable}
+                    </Link>
+                  </li>
+                );
+              })}
               <li onClick={() => setIsOpen(!isOpen)}>
                 <button className="md:hidden flex bg-Rhino rounded-[29px] p-[8px_15px] text-white font-Roboto text-base font-normal leading-[normal]">
                   Log in
