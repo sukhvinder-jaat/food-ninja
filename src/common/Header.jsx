@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ const Header = () => {
       document.body.classList.remove("max-[768px]:overflow-hidden");
     };
   }, [isOpen]);
-
+  const path = useLocation();
   return (
     <>
       <div>
@@ -32,27 +32,39 @@ const Header = () => {
                 <ul className="flex items-baseline gap-5">
                   <li>
                     <Link
-                      to="/blog"
-                      className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal] "
+                      to="/blog-page"
+                      className={`${
+                        path.pathname === "/blog-page"
+                          ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
+                          : "text-Willow"
+                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]`}
                     >
                       Blog
                     </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]"
+                    <Link
+                      to="/about-page"
+                      className={`${
+                        path.pathname === "/about-page"
+                          ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
+                          : "text-Willow"
+                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]`}
                     >
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
-                      className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]"
+                    <Link
+                      to="/contact-page"
+                      className={`${
+                        path.pathname === "/contact-page"
+                          ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
+                          : "text-Willow"
+                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]`}
                     >
                       Contact
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
@@ -117,28 +129,32 @@ const Header = () => {
           >
             <ul className="px-2 pt-2 pb-3 space-y-1 h-full sm:px-3 flex flex-col justify-center items-center h_mobile">
               <li onClick={() => setIsOpen(!isOpen)}>
-                <a
-                  href="#"
-                  className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal] "
+                <Link
+                  to="/blog"
+                  className={`${
+                    path.pathname === "/"
+                      ? "text-Willow"
+                      : "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
+                  }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]`}
                 >
                   Blog
-                </a>
+                </Link>
               </li>
               <li onClick={() => setIsOpen(!isOpen)}>
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li onClick={() => setIsOpen(!isOpen)}>
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
               <li onClick={() => setIsOpen(!isOpen)}>
                 <button className="md:hidden flex bg-Rhino rounded-[29px] p-[8px_15px] text-white font-Roboto text-base font-normal leading-[normal]">

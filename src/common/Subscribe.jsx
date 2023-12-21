@@ -27,19 +27,19 @@ const Subscribe = () => {
           </p>
           <Link
             to="/"
-            className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5 max-w-[242px] hover:underline inline-block"
+            className="text-black font-Merriweather text-xs font-medium leading-[160%] mb-5 max-w-[275px] hover:underline inline-block"
           >
             How To Have Your Cake and Eat It Too: The Way of The Chicken Man
           </Link>
           <Link
             to="/"
-            className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5 hover:underline inline-block"
+            className="text-black font-Merriweather text-xs font-medium leading-[160%] mb-5 hover:underline inline-block"
           >
             My Grandma’s 30-year-old Recipe
           </Link>
           <Link
             to="/"
-            className="text-black font-Roboto text-xs font-medium leading-[160%] hover:underline inline-block"
+            className="text-black font-Merriweather text-xs font-medium leading-[160%] hover:underline inline-block"
           >
             What I learned about cooking from Ratatoulie
           </Link>
@@ -50,19 +50,19 @@ const Subscribe = () => {
           </p>
           <Link
             to="/"
-            className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5 max-w-[242px] hover:underline inline-block"
+            className="text-black font-Merriweather text-xs font-medium leading-[160%] mb-5 max-w-[275px] hover:underline inline-block"
           >
             How To Have Your Cake and Eat It Too: The Way of The Chicken Man
           </Link>
           <Link
             to="/"
-            className="text-black font-Roboto text-xs font-medium leading-[160%] mb-5 hover:underline inline-block"
+            className="text-black font-Merriweather text-xs font-medium leading-[160%] mb-5 hover:underline inline-block"
           >
             My Grandma’s 30-year-old Recipe
           </Link>
           <Link
             to="/"
-            className="text-black font-Roboto text-xs font-medium leading-[160%] hover:underline inline-block"
+            className="text-black font-Merriweather text-xs font-medium leading-[160%] hover:underline inline-block"
           >
             What I learned about cooking from Ratatoulie
           </Link>

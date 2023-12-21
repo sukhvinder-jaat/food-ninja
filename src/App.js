@@ -5,6 +5,8 @@ import BlogPage from "./views/BlogPage";
 import BackToTopButton from "./common/BackToTopButton";
 import Preloader from "./common/Preloader";
 import { useEffect, useState } from "react";
+import AboutPage from "./views/AboutPage";
+import ContactPage from "./views/ContactPage";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -22,7 +24,9 @@ function App() {
       {loading && <Preloader />}
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog-page" element={<BlogPage />} />
+        <Route path="/about-page" element={<AboutPage />} />
+        <Route path="/contact-page" element={<ContactPage />} />
       </Routes>
     </>
   );

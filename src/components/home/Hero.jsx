@@ -19,7 +19,7 @@ const Hero = () => {
             placeholder="Search for articles"
             className="ps-7 py-[18px] w-full text-Scorpion placeholder:text-Scorpion font-Merriweather text-base font-normal leading-[normal] focus-visible:outline-none"
           />
-          <label for="search">
+          <label htmlFor="search">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -29,8 +29,8 @@ const Hero = () => {
               className=" cursor-pointer"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M17.4142 7C17.4142 9.76142 15.1756 12 12.4142 12C9.65279 12 7.41421 9.76142 7.41421 7C7.41421 4.23858 9.65279 2 12.4142 2C15.1756 2 17.4142 4.23858 17.4142 7ZM19.4142 7C19.4142 10.866 16.2802 14 12.4142 14C10.7359 14 9.19552 13.4094 7.98963 12.4246L1.41421 19L0 17.5858L6.63493 10.9509C5.86476 9.82642 5.41421 8.46583 5.41421 7C5.41421 3.13401 8.54822 0 12.4142 0C16.2802 0 19.4142 3.13401 19.4142 7Z"
                 fill="#DDDDDD"
               />
@@ -47,7 +47,7 @@ const Hero = () => {
                   className="flex flex-col h-full group"
                   key={i}
                 >
-                  <div className=" overflow-hidden rounded-[5px] min-h-[270px]">
+                  <div className=" overflow-hidden rounded-[5px] lg:min-h-[270px] min-h-[190px]">
                     <img
                       src={data.mainImage}
                       alt={data.mainImageName}
