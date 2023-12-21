@@ -41,12 +41,8 @@ const Hero = () => {
         <div className="md:mt-16 mt-10  flex flex-wrap">
           {FoodData.map((data, i) => {
             return (
-              <div className={`md:w-6/12 w-full ${data.space}`}>
-                <Link
-                  to={data.to}
-                  className="flex flex-col h-full group"
-                  key={i}
-                >
+              <div className={`md:w-6/12 w-full ${data.space}`} key={i}>
+                <Link to={data.to} className="flex flex-col h-full group">
                   <div className=" overflow-hidden rounded-[5px] lg:min-h-[270px] min-h-[190px]">
                     <img
                       src={data.mainImage}
