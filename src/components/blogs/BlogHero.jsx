@@ -50,7 +50,7 @@ const BlogHero = () => {
           <ul className=" list-decimal ps-[18px]">
             <li>
               <Link
-                className=" underline underline-offset-2 text-Shaft font-Merriweather text-base font-normal leading-[160%]"
+                className=" underline underline-offset-2 text-Shaft font-Merriweather text-base font-normal leading-[160%] hover:text-Rhino hover:tracking-[1px] transition-all ease-linear duration-300"
                 to="/"
               >
                 How to travel without spending a dime
@@ -58,7 +58,7 @@ const BlogHero = () => {
             </li>
             <li className="my-4">
               <Link
-                className=" underline underline-offset-2 text-Shaft font-Merriweather text-base font-normal leading-[160%] "
+                className=" underline underline-offset-2 text-Shaft font-Merriweather text-base font-normal leading-[160%] hover:text-Rhino hover:tracking-[1px] transition-all ease-linear duration-300"
                 to="/"
               >
                 Get the most out of your credit card reward points
@@ -67,7 +67,7 @@ const BlogHero = () => {
             <li>
               <Link
                 to="/"
-                className=" underline underline-offset-2 text-Shaft font-Merriweather text-base font-normal leading-[160%]"
+                className=" underline underline-offset-2 text-Shaft font-Merriweather text-base font-normal leading-[160%] hover:text-Rhino hover:tracking-[1px] transition-all ease-linear duration-300"
               >
                 Why you don’t need more than 3 pieces of clothing
               </Link>

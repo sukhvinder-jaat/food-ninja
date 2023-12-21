@@ -37,7 +37,7 @@ const Header = () => {
                         path.pathname === "/blog-page"
                           ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
                           : "text-Willow"
-                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]`}
+                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
                     >
                       Blog
                     </Link>
@@ -49,7 +49,7 @@ const Header = () => {
                         path.pathname === "/about-page"
                           ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
                           : "text-Willow"
-                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]`}
+                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
                     >
                       About
                     </Link>
@@ -61,7 +61,7 @@ const Header = () => {
                         path.pathname === "/contact-page"
                           ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
                           : "text-Willow"
-                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]`}
+                      }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
                     >
                       Contact
                     </Link>
@@ -75,7 +75,7 @@ const Header = () => {
                 </ul>
               </div>
 
-              <div className="-mr-2 flex md:hidden">
+              <div className="flex md:hidden">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
                   type="button"
@@ -120,7 +120,6 @@ const Header = () => {
               </div>
             </div>
           </div>
-
           <div
             className={`md:opacity-0 transition-all w-screen min-[767.98px]:w-0 duration-500 fixed h-screen  z-30 bg-white top-0 ${
               isOpen ? " max-[768.98px]:translate-x-0" : "translate-x-[-100%]"
@@ -135,7 +134,7 @@ const Header = () => {
                     path.pathname === "/"
                       ? "text-Willow"
                       : "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
-                  }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]`}
+                  }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
                 >
                   Blog
                 </Link>
@@ -143,7 +142,7 @@ const Header = () => {
               <li onClick={() => setIsOpen(!isOpen)}>
                 <Link
                   to="/"
-                  className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]"
+                  className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]"
                 >
                   About
                 </Link>
@@ -151,7 +150,7 @@ const Header = () => {
               <li onClick={() => setIsOpen(!isOpen)}>
                 <Link
                   to="/"
-                  className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full hover:after:left-0 after:left-[50%] font-Roboto text-base font-normal leading-[normal]"
+                  className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0  font-Roboto text-base font-normal leading-[normal]"
                 >
                   Contact
                 </Link>
