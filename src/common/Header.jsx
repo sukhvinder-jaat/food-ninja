@@ -129,11 +129,11 @@ const Header = () => {
             <ul className="px-2 pt-2 pb-3 space-y-1 h-full sm:px-3 flex flex-col justify-center items-center h_mobile">
               <li onClick={() => setIsOpen(!isOpen)}>
                 <Link
-                  to="/blog"
+                  to="/blog-page"
                   className={`${
-                    path.pathname === "/"
-                      ? "text-Willow"
-                      : "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
+                    path.pathname === "/blog-page"
+                      ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
+                      : "text-Willow"
                   }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
                 >
                   Blog
@@ -141,16 +141,24 @@ const Header = () => {
               </li>
               <li onClick={() => setIsOpen(!isOpen)}>
                 <Link
-                  to="/"
-                  className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]"
+                  to="/about-page"
+                  className={`${
+                    path.pathname === "/about-page"
+                      ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
+                      : "text-Willow"
+                  }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
                 >
                   About
                 </Link>
               </li>
               <li onClick={() => setIsOpen(!isOpen)}>
                 <Link
-                  to="/"
-                  className="text-Willow relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0  font-Roboto text-base font-normal leading-[normal]"
+                  to="/contact-page"
+                  className={`${
+                    path.pathname === "/contact-page"
+                      ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
+                      : "text-Willow"
+                  }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
                 >
                   Contact
                 </Link>
