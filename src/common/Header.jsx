@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { links } from "./Helper";
+import { post } from "../model/data.ts";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
@@ -30,18 +31,18 @@ const Header = () => {
               </div>
               <div className="hidden md:block">
                 <ul className="flex items-baseline gap-5">
-                  {links.map((link, i) => {
+                  {post.map((link, i) => {
                     return (
                       <li onClick={() => setIsOpen(!isOpen)} key={i}>
                         <Link
-                          to={link.to}
+                          to={link.content[0].to}
                           className={`${
                             path.pathname === link.to
                               ? "relative after:content-[''] after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl after:w-full after:left-0"
                               : "text-Willow"
                           }  relative after:content-['']  after:w-0 after:h-[2px] after:transition-all transition-all  after:ease-in-out ease-in-out after:duration-300 after:bg-Willow  after:absolute after:bottom-[-4px] after:rounded-3xl hover:after:w-full after:left-0 font-Roboto text-base font-normal leading-[normal]`}
                         >
-                          {link.lable}
+                          {link.content[0].label}
                         </Link>
                       </li>
                     );

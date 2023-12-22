@@ -2,6 +2,7 @@ import React from "react";
 import george from "../../assets/images/webp/georgeImage.webp";
 import { FoodData } from "../../common/Helper";
 import { Link } from "react-router-dom";
+import { post } from "../../model/data.ts";
 const Hero = () => {
   return (
     <>
@@ -38,41 +39,44 @@ const Hero = () => {
           </label>
         </div>
         {/* cards */}
-        <div className="md:mt-16 mt-10  flex flex-wrap">
-          {FoodData.map((data, i) => {
+        <div className="  flex flex-wrap">
+          {post.map((data, i) => {
             return (
-              <div className={`md:w-6/12 w-full ${data.space}`} key={i}>
-                <Link to={data.to} className="flex flex-col h-full group">
+              <div className={`md:w-6/12 w-full px-2 md:mt-16 mt-10`} key={i}>
+                <Link
+                  to={data.content[0].to}
+                  className="flex flex-col h-full group"
+                >
                   <div className=" overflow-hidden rounded-[5px] lg:min-h-[270px] min-h-[190px]">
                     <img
-                      src={data.mainImage}
-                      alt={data.mainImageName}
+                      src={data.image}
+                      alt={data.image}
                       className="w-full group-hover:scale-110 transition-all ease-linear duration-200"
                     />
                   </div>
                   <div className="pt-5 flex flex-col md:justify-between h-full xl:max-h-[345px] lg:max-h-[370px] md:max-h-[405px]">
                     <div className="mb-0">
                       <button className="text-[#DFE1E7] font-Roboto text-xs font-medium leading-[normal] p-[5px_17px] rounded-[3px] bg-Rhino mb-2 hover:text-Rhino overflow-hidden relative after:content-[''] after:w-0 hover:after:w-full after:absolute after:bg-white after:h-0 hover:after:h-full after:top-0 hover:after:start-0 border-[2px] border-Rhino after:start-[50%] after:transition-all ease-in-out after:duration-300 duration-300 after:rounded-[3px]">
-                        <span className=" relative z-10"> {data.btn}</span>
+                        <span className=" relative z-10"> {data.category}</span>
                       </button>
                       <p className="font-Merriweather md:text-xl text-lg text-Stratos font-bold leading-[140%] max-w-[515px]">
-                        {data.heading}
+                        {data.description.subHeading}
                       </p>
                       <p className="text-Emperor font-Merriweather text-xs font-normal leading-[160%] mb-4">
-                        {data.date}
+                        {data.createdAt}
                       </p>
                       <p className="text-Tundora font-Roboto text-sm font-normal leading-[160%] mb-4">
-                        {data.para}
+                        {data.description.description}
                       </p>
                     </div>
                     <div className="flex items-center gap-[14px]">
                       <img
-                        src={george}
-                        alt="george"
+                        src={data.author.image}
+                        alt={data.author.image}
                         className="max-w-[42px] max-h-[42px] w-full"
                       />
                       <p className=" text-black font-Merriweather text-xs font-bold leading-[160%]">
-                        George Costanza
+                        {data.author.tittle}
                       </p>
                     </div>
                   </div>

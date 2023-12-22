@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <BackToTopButton />
-      {loading && <Preloader />}
+      {/* {loading && <Preloader />} */}
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/blog-page" element={<BlogPage />} />
